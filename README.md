@@ -59,7 +59,7 @@ npm run build
 La aplicación está configurada para desplegarse automáticamente en GitHub Pages usando GitHub Actions.
 
 ### URL de Producción
-[https://[tu-usuario].github.io/paradise-nursery/](https://[tu-usuario].github.io/paradise-nursery/)
+[https://karlascs.github.io/-Paradise-Nursery/](https://karlascs.github.io/-Paradise-Nursery/)
 
 ## 📁 Estructura del Proyecto
 
