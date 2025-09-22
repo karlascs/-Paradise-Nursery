@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../store/cartSlice';
+import { formatPrice } from '../utils/formatters';
 import './PlantCard.css';
 
 const PlantCard = ({ plant }) => {
@@ -35,7 +36,7 @@ const PlantCard = ({ plant }) => {
       <div className="plant-info">
         <h3 className="plant-name">{plant.name}</h3>
         <p className="plant-description">{plant.description}</p>
-        <div className="plant-price">${plant.price.toFixed(2)}</div>
+        <div className="plant-price">{formatPrice(plant.price)}</div>
         
         <button 
           className="add-to-cart-btn"

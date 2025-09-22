@@ -16,7 +16,7 @@ export const plantsData = {
       id: 1,
       name: "Albahaca",
       description: "Planta aromática perfecta para cocinar, con hojas fragantes y fácil cuidado.",
-      price: 15.99,
+      price: 8500,
       image: albahacaImg,
       category: "aromaticas"
     },
@@ -24,7 +24,7 @@ export const plantsData = {
       id: 2,
       name: "Romero",
       description: "Hierba aromática perenne con propiedades culinarias y medicinales.",
-      price: 18.50,
+      price: 9500,
       image: romeroImg,
       category: "aromaticas"
     },
@@ -32,7 +32,7 @@ export const plantsData = {
       id: 3,
       name: "Menta",
       description: "Planta refrescante ideal para infusiones y cócteles naturales.",
-      price: 12.75,
+      price: 7500,
       image: mentaImg,
       category: "aromaticas"
     },
@@ -40,7 +40,7 @@ export const plantsData = {
       id: 4,
       name: "Tomillo",
       description: "Hierba aromática con pequeñas hojas y flores, perfecta para condimentar.",
-      price: 16.25,
+      price: 8800,
       image: tomilloImg,
       category: "aromaticas"
     },
@@ -48,7 +48,7 @@ export const plantsData = {
       id: 5,
       name: "Orégano",
       description: "Hierba esencial para la cocina mediterránea con intenso aroma.",
-      price: 14.99,
+      price: 8200,
       image: oreganoImg,
       category: "aromaticas"
     }
@@ -58,7 +58,7 @@ export const plantsData = {
       id: 6,
       name: "Lavanda",
       description: "Planta medicinal conocida por sus propiedades relajantes y aroma único.",
-      price: 22.50,
+      price: 12500,
       image: lavandaImg,
       category: "medicinales"
     },
@@ -66,7 +66,7 @@ export const plantsData = {
       id: 7,
       name: "Manzanilla",
       description: "Planta medicinal tradicional, perfecta para infusiones calmantes.",
-      price: 19.99,
+      price: 11200,
       image: manzanillaImg,
       category: "medicinales"
     },
@@ -74,7 +74,7 @@ export const plantsData = {
       id: 8,
       name: "Aloe Vera",
       description: "Suculenta medicinal con propiedades curativas para la piel.",
-      price: 25.00,
+      price: 15000,
       image: aloeVeraImg,
       category: "medicinales"
     },
@@ -82,7 +82,7 @@ export const plantsData = {
       id: 9,
       name: "Caléndula",
       description: "Flor medicinal con propiedades antiinflamatorias y cicatrizantes.",
-      price: 17.75,
+      price: 9800,
       image: calendulaImg,
       category: "medicinales"
     },
@@ -90,7 +90,7 @@ export const plantsData = {
       id: 10,
       name: "Eucalipto",
       description: "Planta medicinal con propiedades expectorantes y refrescantes.",
-      price: 28.90,
+      price: 16500,
       image: eucaliptoImg,
       category: "medicinales"
     }

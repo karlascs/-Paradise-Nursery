@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { incrementQuantity, decrementQuantity, removeFromCart } from '../store/cartSlice';
+import { formatPrice } from '../utils/formatters';
 import './CartItem.css';
 
 const CartItem = ({ item }) => {
@@ -43,7 +44,7 @@ const CartItem = ({ item }) => {
         <h3 className="item-name">{item.name}</h3>
         <p className="item-description">{item.description}</p>
         <div className="item-price">
-          <span className="unit-price">Precio unitario: ${item.price.toFixed(2)}</span>
+          <span className="unit-price">Precio unitario: {formatPrice(item.price)}</span>
         </div>
       </div>
       
@@ -66,7 +67,7 @@ const CartItem = ({ item }) => {
         </div>
         
         <div className="item-total">
-          <strong>Total: ${item.totalPrice.toFixed(2)}</strong>
+          <strong>Total: {formatPrice(item.totalPrice)}</strong>
         </div>
         
         <button 

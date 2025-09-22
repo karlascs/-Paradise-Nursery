@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { clearCart } from '../store/cartSlice';
+import { formatPrice } from '../utils/formatters';
 import CartItem from '../components/CartItem';
 import './Cart.css';
 
@@ -61,7 +62,7 @@ const Cart = () => {
               
               <div className="summary-row">
                 <span>Subtotal:</span>
-                <span>${totalAmount.toFixed(2)}</span>
+                <span>{formatPrice(totalAmount)}</span>
               </div>
               
               <div className="summary-row">
@@ -73,7 +74,7 @@ const Cart = () => {
               
               <div className="summary-row total">
                 <span><strong>Total:</strong></span>
-                <span><strong>${totalAmount.toFixed(2)}</strong></span>
+                <span><strong>{formatPrice(totalAmount)}</strong></span>
               </div>
 
               <div className="cart-actions">

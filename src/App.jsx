@@ -13,8 +13,11 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/-Paradise-Nursery/" element={<Home />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/-Paradise-Nursery/products" element={<Products />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/-Paradise-Nursery/cart" element={<Cart />} />
         </Routes>
       </main>
     </div>
