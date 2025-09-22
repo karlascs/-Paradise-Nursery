@@ -1,9 +1,14 @@
-// Helper function para las rutas de imágenes
-const getImagePath = (imageName) => {
-  // En desarrollo usa la ruta absoluta, en producción usa la ruta relativa a la base
-  const basePath = import.meta.env.DEV ? '' : '/-Paradise-Nursery';
-  return `${basePath}/images/plants/${imageName}`;
-};
+// Importar imágenes como módulos de Vite
+import albahacaImg from '/images/plants/albahaca.png';
+import romeroImg from '/images/plants/romero.png';
+import mentaImg from '/images/plants/menta.png';
+import tomilloImg from '/images/plants/tomillo.png';
+import oreganoImg from '/images/plants/oregano.png';
+import lavandaImg from '/images/plants/lavanda.png';
+import manzanillaImg from '/images/plants/manzanilla.png';
+import aloeVeraImg from '/images/plants/aloevera.png';
+import calendulaImg from '/images/plants/calendula.png';
+import eucaliptoImg from '/images/plants/eucaliptp.png';
 
 export const plantsData = {
   aromaticas: [
@@ -12,7 +17,7 @@ export const plantsData = {
       name: "Albahaca",
       description: "Planta aromática perfecta para cocinar, con hojas fragantes y fácil cuidado.",
       price: 15.99,
-      image: getImagePath("albahaca.png"),
+      image: albahacaImg,
       category: "aromaticas"
     },
     {
@@ -20,7 +25,7 @@ export const plantsData = {
       name: "Romero",
       description: "Hierba aromática perenne con propiedades culinarias y medicinales.",
       price: 18.50,
-      image: getImagePath("romero.png"),
+      image: romeroImg,
       category: "aromaticas"
     },
     {
@@ -28,7 +33,7 @@ export const plantsData = {
       name: "Menta",
       description: "Planta refrescante ideal para infusiones y cócteles naturales.",
       price: 12.75,
-      image: getImagePath("menta.png"),
+      image: mentaImg,
       category: "aromaticas"
     },
     {
@@ -36,7 +41,7 @@ export const plantsData = {
       name: "Tomillo",
       description: "Hierba aromática con pequeñas hojas y flores, perfecta para condimentar.",
       price: 16.25,
-      image: getImagePath("tomillo.png"),
+      image: tomilloImg,
       category: "aromaticas"
     },
     {
@@ -44,7 +49,7 @@ export const plantsData = {
       name: "Orégano",
       description: "Hierba esencial para la cocina mediterránea con intenso aroma.",
       price: 14.99,
-      image: getImagePath("oregano.png"),
+      image: oreganoImg,
       category: "aromaticas"
     }
   ],
@@ -54,7 +59,7 @@ export const plantsData = {
       name: "Lavanda",
       description: "Planta medicinal conocida por sus propiedades relajantes y aroma único.",
       price: 22.50,
-      image: getImagePath("lavanda.png"),
+      image: lavandaImg,
       category: "medicinales"
     },
     {
@@ -62,7 +67,7 @@ export const plantsData = {
       name: "Manzanilla",
       description: "Planta medicinal tradicional, perfecta para infusiones calmantes.",
       price: 19.99,
-      image: getImagePath("manzanilla.png"),
+      image: manzanillaImg,
       category: "medicinales"
     },
     {
@@ -70,7 +75,7 @@ export const plantsData = {
       name: "Aloe Vera",
       description: "Suculenta medicinal con propiedades curativas para la piel.",
       price: 25.00,
-      image: getImagePath("aloevera.png"),
+      image: aloeVeraImg,
       category: "medicinales"
     },
     {
@@ -78,7 +83,7 @@ export const plantsData = {
       name: "Caléndula",
       description: "Flor medicinal con propiedades antiinflamatorias y cicatrizantes.",
       price: 17.75,
-      image: getImagePath("calendula.png"),
+      image: calendulaImg,
       category: "medicinales"
     },
     {
@@ -86,7 +91,7 @@ export const plantsData = {
       name: "Eucalipto",
       description: "Planta medicinal con propiedades expectorantes y refrescantes.",
       price: 28.90,
-      image: getImagePath("eucaliptp.png"),
+      image: eucaliptoImg,
       category: "medicinales"
     }
   ]
