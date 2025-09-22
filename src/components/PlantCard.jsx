@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../store/cartSlice';
 import { formatPrice } from '../utils/formatters';
 import './PlantCard.css';
@@ -7,6 +7,10 @@ import './PlantCard.css';
 const PlantCard = ({ plant }) => {
   const dispatch = useDispatch();
   const [imageError, setImageError] = useState(false);
+  
+  // Verificar si la planta ya está en el carrito
+  const cartItems = useSelector(state => state.cart.items);
+  const isInCart = cartItems.some(item => item.id === plant.id);
 
   const handleAddToCart = () => {
     dispatch(addToCart(plant));
@@ -39,10 +43,11 @@ const PlantCard = ({ plant }) => {
         <div className="plant-price">{formatPrice(plant.price)}</div>
         
         <button 
-          className="add-to-cart-btn"
+          className={`add-to-cart-btn ${isInCart ? 'disabled' : ''}`}
           onClick={handleAddToCart}
+          disabled={isInCart}
         >
-          Agregar al carrito
+          {isInCart ? 'Agregado al carrito' : 'Agregar al carrito'}
         </button>
       </div>
     </div>

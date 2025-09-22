@@ -43,17 +43,17 @@ export const plantsData = {
       price: 8800,
       image: tomilloImg,
       category: "aromaticas"
-    },
+    }
+  ],
+  medicinales: [
     {
       id: 5,
       name: "Orégano",
       description: "Hierba esencial para la cocina mediterránea con intenso aroma.",
       price: 8200,
       image: oreganoImg,
-      category: "aromaticas"
-    }
-  ],
-  medicinales: [
+      category: "medicinales"
+    },
     {
       id: 6,
       name: "Lavanda",
@@ -77,14 +77,16 @@ export const plantsData = {
       price: 15000,
       image: aloeVeraImg,
       category: "medicinales"
-    },
+    }
+  ],
+  decorativas: [
     {
       id: 9,
       name: "Caléndula",
       description: "Flor medicinal con propiedades antiinflamatorias y cicatrizantes.",
       price: 9800,
       image: calendulaImg,
-      category: "medicinales"
+      category: "decorativas"
     },
     {
       id: 10,
@@ -92,7 +94,7 @@ export const plantsData = {
       description: "Planta medicinal con propiedades expectorantes y refrescantes.",
       price: 16500,
       image: eucaliptoImg,
-      category: "medicinales"
+      category: "decorativas"
     }
   ]
 };
