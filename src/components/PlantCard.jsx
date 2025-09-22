@@ -1,19 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../store/cartSlice';
 import './PlantCard.css';
 
 const PlantCard = ({ plant }) => {
   const dispatch = useDispatch();
+  const [imageError, setImageError] = useState(false);
 
   const handleAddToCart = () => {
     dispatch(addToCart(plant));
   };
 
+  const handleImageError = () => {
+    setImageError(true);
+  };
+
   return (
     <div className="plant-card">
       <div className="plant-image">
-        <img src={plant.image} alt={plant.name} />
+        {imageError ? (
+          <div className="image-placeholder">
+            <span>🌿</span>
+            <p>{plant.name}</p>
+          </div>
+        ) : (
+          <img 
+            src={plant.image} 
+            alt={plant.name} 
+            onError={handleImageError}
+          />
+        )}
       </div>
       
       <div className="plant-info">

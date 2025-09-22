@@ -1,3 +1,10 @@
+// Helper function para las rutas de imágenes
+const getImagePath = (imageName) => {
+  // En desarrollo usa la ruta absoluta, en producción usa la ruta relativa a la base
+  const basePath = import.meta.env.DEV ? '' : '/-Paradise-Nursery';
+  return `${basePath}/images/plants/${imageName}`;
+};
+
 export const plantsData = {
   aromaticas: [
     {
@@ -5,7 +12,7 @@ export const plantsData = {
       name: "Albahaca",
       description: "Planta aromática perfecta para cocinar, con hojas fragantes y fácil cuidado.",
       price: 15.99,
-      image: "/images/plants/albahaca.png",
+      image: getImagePath("albahaca.png"),
       category: "aromaticas"
     },
     {
@@ -13,7 +20,7 @@ export const plantsData = {
       name: "Romero",
       description: "Hierba aromática perenne con propiedades culinarias y medicinales.",
       price: 18.50,
-      image: "/images/plants/romero.png",
+      image: getImagePath("romero.png"),
       category: "aromaticas"
     },
     {
@@ -21,7 +28,7 @@ export const plantsData = {
       name: "Menta",
       description: "Planta refrescante ideal para infusiones y cócteles naturales.",
       price: 12.75,
-      image: "/images/plants/menta.png",
+      image: getImagePath("menta.png"),
       category: "aromaticas"
     },
     {
@@ -29,7 +36,7 @@ export const plantsData = {
       name: "Tomillo",
       description: "Hierba aromática con pequeñas hojas y flores, perfecta para condimentar.",
       price: 16.25,
-      image: "/images/plants/tomillo.png",
+      image: getImagePath("tomillo.png"),
       category: "aromaticas"
     },
     {
@@ -37,7 +44,7 @@ export const plantsData = {
       name: "Orégano",
       description: "Hierba esencial para la cocina mediterránea con intenso aroma.",
       price: 14.99,
-      image: "/images/plants/oregano.png",
+      image: getImagePath("oregano.png"),
       category: "aromaticas"
     }
   ],
@@ -47,7 +54,7 @@ export const plantsData = {
       name: "Lavanda",
       description: "Planta medicinal conocida por sus propiedades relajantes y aroma único.",
       price: 22.50,
-      image: "/images/plants/lavanda.png",
+      image: getImagePath("lavanda.png"),
       category: "medicinales"
     },
     {
@@ -55,7 +62,7 @@ export const plantsData = {
       name: "Manzanilla",
       description: "Planta medicinal tradicional, perfecta para infusiones calmantes.",
       price: 19.99,
-      image: "/images/plants/manzanilla.png",
+      image: getImagePath("manzanilla.png"),
       category: "medicinales"
     },
     {
@@ -63,7 +70,7 @@ export const plantsData = {
       name: "Aloe Vera",
       description: "Suculenta medicinal con propiedades curativas para la piel.",
       price: 25.00,
-      image: "/images/plants/aloevera.png",
+      image: getImagePath("aloevera.png"),
       category: "medicinales"
     },
     {
@@ -71,7 +78,7 @@ export const plantsData = {
       name: "Caléndula",
       description: "Flor medicinal con propiedades antiinflamatorias y cicatrizantes.",
       price: 17.75,
-      image: "/images/plants/calendula.png",
+      image: getImagePath("calendula.png"),
       category: "medicinales"
     },
     {
@@ -79,7 +86,7 @@ export const plantsData = {
       name: "Eucalipto",
       description: "Planta medicinal con propiedades expectorantes y refrescantes.",
       price: 28.90,
-      image: "/images/plants/eucaliptp.png",
+      image: getImagePath("eucaliptp.png"),
       category: "medicinales"
     }
   ]

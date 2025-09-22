@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { incrementQuantity, decrementQuantity, removeFromCart } from '../store/cartSlice';
 import './CartItem.css';
 
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();
+  const [imageError, setImageError] = useState(false);
 
   const handleIncrement = () => {
     dispatch(incrementQuantity(item.id));
@@ -18,10 +19,24 @@ const CartItem = ({ item }) => {
     dispatch(removeFromCart(item.id));
   };
 
+  const handleImageError = () => {
+    setImageError(true);
+  };
+
   return (
     <div className="cart-item">
       <div className="item-image">
-        <img src={item.image} alt={item.name} />
+        {imageError ? (
+          <div className="cart-image-placeholder">
+            <span>🌿</span>
+          </div>
+        ) : (
+          <img 
+            src={item.image} 
+            alt={item.name} 
+            onError={handleImageError}
+          />
+        )}
       </div>
       
       <div className="item-details">
